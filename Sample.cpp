@@ -1,27 +1,23 @@
 #include<iostream>
 using namespace std;
-int gcd(int, int);
-int count = 0;
 int main()
 {
-    int a , b;
-    cout<< "Enter the value of A and B..";
-    cin >> a>>b;
-    int value = gcd(a, b);
-    cout << "GCD.." << value;
-    cout << "Count.." << count;
-}
-
-int gcd(int a, int b)
-{
-    count ++;
-    cout<< " A.." << a;
-    cout<<" B.." << b;
-    cout<< endl;
-    if(b == 0)
+    int count = 0;
+    int first, second;
+    cout << "Enter 2 values A and B to find LCM..";
+    cin>> first >> second;
+    int flag = 0;
+    int value = first;
+    while(flag != 1)
     {
-        return a;
+        count++;
+        if(value % first ==0 && value % second == 0)
+        {
+            flag = 1;
+            value = value - first;
+        }
+        value = value + first;
     }
-    return gcd(b, a % b);
+    cout<<"LCM.." << value;
+    cout<< "Count.." << count;
 }
-
