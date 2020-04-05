@@ -5,9 +5,18 @@
 #include <math.h>
 using namespace std;
 
+int gcd(int a, int b)
+{
+    int remainder = 0;
+    if(b == 0)
+    {
+        cout<< a;
+    }
+    remainder = a % b;
+    gcd(b, remainder);
+}
+
 int main()
 {
-    vector<int> nums = {0,1,0,3,12};
-    for(int i = 0; i < )
-
+gcd(270, 192);
 }
